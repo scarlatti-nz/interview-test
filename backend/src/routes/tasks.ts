@@ -69,7 +69,7 @@ router.patch('/:id', async (req, res) => {
   const db = getDb(req)
   const body = req.body as Partial<UpdateTaskInput>
   try {
-    const updated = await db.patchTask(req.params.id, body)
+    const updated = await db.updateTask(req.params.id, body as UpdateTaskInput)
     res.json(updated)
   } catch {
     res.status(404).json({ message: 'Not found' })
