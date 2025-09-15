@@ -141,7 +141,6 @@ export class InMemoryDatabaseService extends DatabaseService {
       title: input.title,
       description: input.description,
       status: input.status ?? 'todo',
-      projectId: input.projectId,
       assigneeId: input.assigneeId,
       createdAt: now,
       updatedAt: now,
@@ -168,7 +167,6 @@ export class InMemoryDatabaseService extends DatabaseService {
       title: input.title,
       description: input.description,
       status: input.status,
-      projectId: input.projectId,
       assigneeId: input.assigneeId,
       updatedAt: new Date(),
     }
